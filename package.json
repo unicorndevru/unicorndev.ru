@@ -1,0 +1,28 @@
+{
+  "name": "unicorndev.ru",
+  "version": "0.0.1",
+  "description": "unicorndev team website",
+  "main": "app.js",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --harmony --use_strict app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unicorndevru/unicorndev.ru.git"
+  },
+  "keywords": [
+    "unicorns"
+  ],
+  "author": "unicorndev team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unicorndevru/unicorndev.ru/issues"
+  },
+  "homepage": "https://github.com/unicorndevru/unicorndev.ru#readme",
+  "dependencies": {
+    "koa": "^1.1.2",
+    "koa-static": "^1.5.2"
+  }
+}
