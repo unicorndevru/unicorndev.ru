@@ -6,7 +6,8 @@
   "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --harmony --use_strict app.js"
+    "start-dev": "node --harmony --use_strict app.js",
+    "start-prod": "export PORT=80 pm2 start app.js --node-args='--harmony --use_strict'"
   },
   "repository": {
     "type": "git",
