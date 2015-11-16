@@ -35,6 +35,13 @@ p {
   padding-bottom: 3rem;
 }
 
+.section-team {
+  background: #eeeeee;
+}
+.section-team .clearfix {
+  /*display: none;*/
+}
+
 .button-collapse {
   color: #26a69a;
 }
