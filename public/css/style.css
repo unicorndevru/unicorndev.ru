@@ -22,6 +22,16 @@ nav .brand-logo {
   stroke-miterlimit:10
 }
 
+.flying-block {
+  position: fixed;
+  right: 0;
+  top:0;
+  background: #fff;
+  padding: 0.4rem 1rem;
+  line-height: 2rem;
+  z-index: 20;
+}
+
 .mega-strong {
   font-weight: 600;
 }
@@ -33,6 +43,10 @@ p {
 .section {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.section-team {
+  background: #eeeeee;
 }
 
 .button-collapse {
