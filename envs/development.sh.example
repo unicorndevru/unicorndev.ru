@@ -1,7 +1,0 @@
-export NODE_APP_PREFIX="UD"
-export UD_APP_PORT="3000"
-export UD_MAIL_TEAM="your@email.com"
-export UD_NODEMAILER_SERVICE="Gmail"
-export UD_NODEMAILER_NAME="\"Someone\" <email@somewhere.ru>"
-export UD_NODEMAILER_AUTH_USER="email@somewhere.ru"
-export UD_NODEMAILER_AUTH_PASS="password"

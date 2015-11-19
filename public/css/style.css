@@ -73,11 +73,6 @@ p {
   font-size: inherit;
 }
 
-footer.page-footer {
-  margin: 0;
-  padding-top: 0;
-}
-
 .send-form {
   margin-right: auto;
   margin-left: auto;
@@ -96,6 +91,11 @@ footer.page-footer {
 .section.no-mar-bot {
   margin-: 0;
   padding: 0;
+}
+
+footer.page-footer {
+  margin: 4rem 0 0 0;
+  padding-top: 0;
 }
 footer.page-footer .footer-copyright {
   height: auto;
