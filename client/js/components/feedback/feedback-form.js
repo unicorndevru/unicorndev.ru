@@ -42,7 +42,6 @@ export default class FeedbackForm extends React.Component {
     let textFieldStyle = {
       width: "100%"
     }
-    console.log(this)
     if(this.state.sent){
       return (
         <div>

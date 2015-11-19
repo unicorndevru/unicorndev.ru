@@ -2,6 +2,7 @@ import React from 'react'
 import ContactUs from '../feedback/contact-us'
 import LandingLogo from './landing-logo'
 import { Router, Route, IndexRoute } from 'react-router'
+import { Parallax } from 'react-parallax'
 
 
 export default () => {
@@ -10,7 +11,9 @@ export default () => {
       <div className="flying-block">
         <a href="mailto:hello@unicorndev.ru">Write us</a>
       </div>
-      <div className="parallax-container valign-wrapper">
+      <Parallax
+        strength={ 400 }
+        bgImage="https://images.unsplash.com/photo-1443926818681-717d074a57af?dpr=2&fit=crop&fm=jpg&h=675&ixlib=rb-0.3.5&q=50&w=1300">
         <div className="section no-pad-bot">
           <div className="container">
             <div className="row center">
@@ -18,15 +21,9 @@ export default () => {
               <h2 className="header col s12 mega-strong white-text">unicorndev</h2>
               <h4 className="header col s12 light white-text">Dedicated team of super professionals to keep your startup at the cutting edge</h4>
             </div>
-
           </div>
         </div>
-        <div className="parallax">
-          <img
-            src="https://images.unsplash.com/photo-1443926818681-717d074a57af?dpr=2&fit=crop&fm=jpg&h=675&ixlib=rb-0.3.5&q=50&w=1300"
-            alt="Unsplashed background img 2"/>
-          </div>
-      </div>
+      </Parallax>
 
       <div className="section no-pad-bot no-mar-bot">
         <div className="container">
