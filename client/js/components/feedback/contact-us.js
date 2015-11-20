@@ -15,7 +15,7 @@ export default (props) => {
             </div>
           </div>
         </Grid>
-        <Grid flex style={{ width: "50%" }}>
+        <Grid flexSm={ 100 } flexGtSm={ 50 } flexOffsetGtSm={ 25 }>
           <p>
             Drop us a line:
           </p>

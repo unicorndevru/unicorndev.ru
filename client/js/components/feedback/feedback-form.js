@@ -59,8 +59,8 @@ export default class FeedbackForm extends React.Component {
 
 
     return (
-      <form onSubmit={ this.submit }>
-        <Grid layout="column" layoutAlign="end">
+      <Grid layout="column" layoutAlign="center">
+        <form onSubmit={ this.submit }>
           <TextField style={ textFieldStyle } name="name" hintText={ "Your name" } onChange={ this.handleChange }/>
           <TextField style={ textFieldStyle } type={ "email" } name="email" hintText={ "E-mail for reply" }  onChange={ this.handleChange }/>
           <TextField
@@ -77,8 +77,8 @@ export default class FeedbackForm extends React.Component {
             primary={ true }
             label="Submit"
             type={'submit'} />
-        </Grid>
-      </form>
+        </form>
+      </Grid>
 
     )
   }

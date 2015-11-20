@@ -3,7 +3,7 @@ import R from 'ramda'
 import './styles.scss'
 
 function camelToDash(string){
-  return string.replace(/([A-Z])/, function(substr, match){
+  return string.replace(/([A-Z])/g, function(substr, match){
     return '-' + match.toLowerCase()
   })
 }
