@@ -11,7 +11,7 @@ export default () => {
     <div>
       <LandingScreen />
 
-      <div className="section no-pad-bot no-mar-bot">
+      <div className="section no-pad-bot">
         <div className="container">
           <Grid layout="row" layoutSm="column" layoutAlign="space-around center">
             <Grid flex={ 50 } flexSm={ 100 } layoutPadding>
@@ -43,169 +43,156 @@ export default () => {
 
       <div className="section">
         <div className="container">
-          <div className="row">
-            <div className="col s12 m6">
+          <Grid layout="row" layoutSm="column" layoutAlign="space-around center">
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding>
               <h4 className="center">Backend</h4>
               <p>Create services using Scala (with Akka, Play, Finch), in modern functional paradigm. It works stable in real-time and users get wow-experience.</p>
               <p>Services are scalable with increasing traffic, without comprising developers productivity and delivery speed.</p>
               <p>We use DDD approach, CQRS / ES and Microservices to fast adapt the product to new business requirements. </p>
-            </div>
-            <div className="col s12 m6">
+            </Grid>
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding>
               <h4 className="center">Frontend</h4>
               <p>We have exceptional experience creating cool architecture on Angular.js, Sass, Gulp, Jade (on directives). </p>
               <p>New projects are to be built using top-notch solutions like React with Redux, ES6, Webpack, FRP, koa.js and radiant future.</p>
               <p>Sites are loading quickly, well indexed by search engines and consistently work on smartphones.</p>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </div>
       </div>
 
       <div className="section">
         <div className="container">
-          <div className="row">
-            <div className="col s12 m6">
+          <Grid layout="row" layoutSm="column" layoutAlign="space-around center">
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding>
               <h4 className="center">Infrastructure</h4>
               <p>We provide infrastructure management through Saltstack — a reliable solution for jet releases of business needs. Consul tool is to efficiently manage clusters and save time for the implementation of changes. Docker, Mesos, Marathon help us save on hardware. Minimize the bugs to reach the ELK (ElasticSearch, Logstash, Kibana).</p>
-            </div>
-            <div className="col s12 m6">
+            </Grid>
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding>
               <h4 className="center">UX</h4>
               <p>Friendly interface hides a deep elaboration in strategy, prototyping and testing. Our team handles the interaction design, information architecture, and user research for the product. We design digital products by focusing on human goals. We perform customer journey and user story mapping, constantly updating our knowledge to bring clarity to complex situations. </p>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </div>
       </div>
 
       <div className="section">
         <div className="container">
-          <div className="row">
-            <div className="col s12">
+          <Grid layout="row" layoutSm="column" layoutAlign="space-around center">
+            <Grid flex={ 100 } layoutPadding>
               <h4 className="center">Product management</h4>
               <p>We are not interested in spherical horses in a vacuum. Technically cool product has no value, if the consumer passed it. Maximize customer value while minimizing waste and implementation costs (MVP, Lean startup). We develop products according the real needs of the audience (Customer development + UX);  create a system of communication and service processes, test demand (SEM, SMM). </p>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </div>
       </div>
 
 
       <div className="section section-team">
         <div className="container">
-          <div className="row">
-            <div className="col s12">
+          <Grid layout="row" layoutSm="column" layoutAlign="space-around center">
+            <Grid flex={ 100 } layoutPadding>
               <h5 className="center">Team</h5>
               <p>Our strongest feature is <em>the team</em>. We know how to work together, and have already developed a <em>highest culture of collaboration</em>. IT and marketing understands each other, so IT is <em>in sync with actual business needs</em>. Code doesn’t have value for us if it doesn’t reach business goal.</p>
               <p>Our team is an added value for your project. And costs is an investment.</p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col s12 m6 l4 center">
+            </Grid>
+          </Grid>
+          <Grid layout="row" layoutSm="column" layoutWrap layoutAlign="space-around center">
+            <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
               <div className="team-avatar"><img className="circle" src="images/team/mitya.jpg"/></div>
               <p>Mitya, lead, backend</p>
-            </div>
-
-            <div className="col s12 m6 l4 center">
+            </Grid>
+            <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
               <div className="team-avatar"><img className="circle" src="images/team/alexey.jpg"/></div>
               <p>Alexey, backend</p>
-            </div>
-
-            <div className="clearfix hide-on-large-only hide-on-small-only"></div>
-
-            <div className="col s12 m6 l4 center">
+            </Grid>
+            <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
               <div className="team-avatar"><img className="circle" src="images/team/dima.jpg"/></div>
               <p>Dmitry, frontend</p>
-            </div>
-
-            <div className="clearfix hide-on-med-only hide-on-small-only"></div>
-
-            <div className="col s12 m6 l4 center">
+            </Grid>
+            <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
               <div className="team-avatar"><img className="circle" src="images/team/matveev.jpg"/></div>
               <p>Andrey, frontend</p>
-            </div>
-
-            <div className="clearfix hide-on-large-only hide-on-small-only"></div>
-
-            <div className="col s12 m6 l4 center">
+            </Grid>
+            <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
               <div className="team-avatar"><img className="circle" src="images/team/fl.jpg"/></div>
               <p>Denis, frontend</p>
-            </div>
-            <div className="col s12 m6 l4 center">
+            </Grid>
+            <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
               <div className="team-avatar"><img className="circle" src="images/team/sokolov.jpg"/></div>
               <p>Evgeny Sokolov, UX</p>
-            </div>
-
-            <div className="clearfix hide-on-large-only hide-on-small-only"></div>
-            <div className="clearfix hide-on-med-only hide-on-small-only"></div>
-
-            <div className="col s12 m6 l4 center">
+            </Grid>
+            <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
               <div className="team-avatar"><img className="circle" src="images/team/krasilova.jpg"/></div>
               <p>Natalia, product manager / marketer</p>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </div>
       </div>
 
       <div className="section">
         <div className="container">
-          <div className="row">
-            <div className="col s12 center">
+          <Grid layout="row" layoutSm="column" layoutAlign="space-around center">
+            <Grid flex={ 100 } layoutPadding className="center">
               <h5>Some projects</h5>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col s12 m6 github-project">
+            </Grid>
+          </Grid>
+          <Grid layout="row" layoutSm="column" layoutAlign="space-around center">
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
               <h5><a href="http://passenger.me">Passenger.me</a></h5>
-              <p>Shopping from USA for 5 days.
+              <p>
+                Shopping from USA for 5 days.
                 <br/>
                 <em className="grey-text text-darken-5">(Released, obsolete)</em>
               </p>
-            </div>
-            <div className="col s12 m6 github-project">
+            </Grid>
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
               <h5><a href="http://mirari.ru/">Mirari.ru</a></h5>
               <p>Publishing platform In progress</p>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </div>
       </div>
       <div className="section grey lighten-5">
         <div className="container">
-          <div className="row">
-            <div className="col s12 center">
+          <Grid layout="row" layoutSm="column" layoutAlign="space-around center">
+            <Grid flex={ 100 } layoutPadding className="center">
               <h5>Some opensource we made to boost our code</h5>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col s12 m6 github-project">
+            </Grid>
+          </Grid>
+          <Grid layout="row" layoutSm="column" layoutWrap layoutAlign="space-around center">
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
               <h5><a href="https://github.com/unicorndevru/unicorn-ng-datepicker">unicorn-ng-datepicker</a></h5>
               <p>unicorn-ng-datepicker</p>
-            </div>
-            <div className="col s12 m6 github-project">
+            </Grid>
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
               <h5><a href="https://github.com/unicorndevru/stateful">stateful</a></h5>
               <p>CQRS helpers for Akka</p>
-            </div>
-            <div className="col s12 m6 github-project">
+            </Grid>
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
               <h5><a href="https://github.com/unicorndevru/expander">expander</a></h5>
               <p>The way to organize API with Scala / Play</p>
-            </div>
-            <div className="col s12 m6 github-project">
+            </Grid>
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
               <h5><a href="https://github.com/unicorndevru/auth">auth</a></h5>
               <p>auth</p>
-            </div>
-            <div className="col s12 m6 github-project">
+            </Grid>
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
               <h5><a href="https://github.com/unicorndevru/unicorn-ng-reflex">unicorn-ng-reflex</a></h5>
               <p>A module to relief pain with async forms, buttons, etc.</p>
-            </div>
-            <div className="col s12 m6 github-project">
+            </Grid>
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
               <h5><a href="https://github.com/unicorndevru/unicorn-ng-kickstart">unicorn-ng-kickstart</a></h5>
               <p>unicorn-ng-kickstart</p>
-            </div>
-            <div className="col s12 m6 github-project">
+            </Grid>
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
               <h5><a href="https://github.com/unicorndevru/unicorn-ng-istates">unicorn-ng-istates</a></h5>
               <p>unicorn-ng-istates</p>
-            </div>
-            <div className="col s12 m6 github-project">
+            </Grid>
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
               <h5><a href="https://github.com/unicorndevru/unicorn-ng-l10n">unicorn-ng-l10n</a></h5>
               <p>unicorn-ng-l10n</p>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </div>
       </div>
 
