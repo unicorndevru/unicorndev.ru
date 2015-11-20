@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   entry: "./client/js/main.js",
   output: {
@@ -20,6 +22,14 @@ module.exports = {
         query: {
           presets: ['es2015', 'stage-1', 'react']
         }
+      },
+      {
+        test: /\.css$/,
+        loaders: ["style", "css"]
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass?includePaths[]=" + path.resolve(__dirname, "./node_modules")]
       }
     ]
   }

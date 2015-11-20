@@ -1,6 +1,6 @@
 import React from 'react'
 import { TextField, RaisedButton, LinearProgress } from 'material-ui'
-import View from 'react-flexbox-ui'
+import Grid from '../grid/grid'
 import superagent from 'superagent'
 
 export default class FeedbackForm extends React.Component {
@@ -60,7 +60,7 @@ export default class FeedbackForm extends React.Component {
 
     return (
       <form onSubmit={ this.submit }>
-        <View column alignEnd>
+        <Grid layout="column" layoutAlign="end">
           <TextField style={ textFieldStyle } name="name" hintText={ "Your name" } onChange={ this.handleChange }/>
           <TextField style={ textFieldStyle } type={ "email" } name="email" hintText={ "E-mail for reply" }  onChange={ this.handleChange }/>
           <TextField
@@ -77,7 +77,7 @@ export default class FeedbackForm extends React.Component {
             primary={ true }
             label="Submit"
             type={'submit'} />
-        </View>
+        </Grid>
       </form>
 
     )

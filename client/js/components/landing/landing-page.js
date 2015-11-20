@@ -3,7 +3,7 @@ import ContactUs from '../feedback/contact-us'
 import LandingLogo from './landing-logo'
 import { Router, Route, IndexRoute } from 'react-router'
 import { Parallax } from 'react-parallax'
-import View from 'react-flexbox-ui'
+import Grid from '../grid/grid'
 
 
 export default () => {
@@ -16,47 +16,46 @@ export default () => {
         strength={ 300 }
         bgImage="https://images.unsplash.com/photo-1443926818681-717d074a57af?dpr=2&fit=crop&fm=jpg&h=675&ixlib=rb-0.3.5&q=50&w=1300">
         <div style={{ height: window.innerHeight }}>
-          <View column justifyCenter alignCenter>
-            <View row style={{ height: window.innerHeight / 2 }} justifyCenter alignCenter>
-              <View item>
-                <LandingLogo/>
-              </View>
-            </View>
-            <View item alignCenter style={{ textAlign: "center", width: "70%" }}>
+          <Grid layout="column" layoutAlign="center center">
+            <Grid layout="column" style={{ height: window.innerHeight / 2 }} layoutAlign="center center">
+              <LandingLogo/>
+            </Grid>
+            <Grid flex layoutAlign="center" style={{ textAlign: "center", width: "70%" }}>
               <h2 className="header col s12 mega-strong white-text">unicorndev</h2>
               <h4 className="header col s12 light white-text">Dedicated team of super professionals to keep your startup at the cutting edge</h4>
-            </View>
-          </View>
+              <h4 className="header col s12 light white-text">Dedicated team of super professionals to keep your startup at the cutting edge</h4>
+            </Grid>
+          </Grid>
         </div>
       </Parallax>
 
       <div className="section no-pad-bot no-mar-bot">
         <div className="container">
-          <div className="row">
-            <div className="col s12 m6">
+          <Grid layout="row" layoutSm="column" layoutAlign="space-around center">
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding>
               <h4 className="center">Marketing</h4>
               <p>The validation of your ideas. We learn market, define target audience, measure demand. We can create a business strategy based on consumer trends. Design of your product we describe according to real needs. While product is developed Unicorn marketing team build a cool customer support and system of communication. After launching we drive traffic and work it effectively. Also we can help you with different part of marketing-mix. </p>
-            </div>
-            <div className="col s12 m6">
+            </Grid>
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding>
               <h4 className="center">Engineering</h4>
               <p>The realization of your ideas. We build a product for the web and a mobile app. Full-cycle Unicorn development team provides high quality and maintainable software. The process of development is transparent. You will get access to our project managment software. We can be alone team in your project, enter into your project group or can provide IT outsourcing.</p>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </div>
       </div>
 
       <div className="section">
         <div className="container">
-          <div className="row">
-            <div className="col s12 m6">
+          <Grid layout="row" layoutSm="column" layoutAlign="space-around center">
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding>
               <h4 className="center">Desing</h4>
               <p>The design of your ideas. Design is a packaging of your product. We create memorable, beautiful design that advocates for the needs of the user. Unicorn design team collect user stories, works through prototypes, get feedbacks and makes it better. Iterative design is the best approach. Its our approach.</p>
-            </div>
-            <div className="col s12 m6">
+            </Grid>
+            <Grid flex={ 50 } flexSm={ 100 } layoutPadding>
               <h4 className="center">Consulting</h4>
               <p>The development of your ideas. Also we can evaluate of your business-model in terms of development, implementation and potential demands. We lead workshops with your team to refine your business-model. We are ready to share our knowledges and experience with your team, teach them and increase their skills in engineering, design, UX, marketing.</p>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </div>
       </div>
 
