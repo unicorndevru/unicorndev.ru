@@ -2,6 +2,7 @@ import React from 'react'
 import FeedbackForm from './feedback-form'
 import View from 'react-flexbox-ui'
 import Grid from '../grid/grid'
+import SendIcon from 'material-ui/lib/svg-icons/content/send'
 
 export default (props) => {
   return (
@@ -10,7 +11,9 @@ export default (props) => {
         <Grid flex>
           <div className="row">
             <div className="col s12 center">
-              <h3><i className="mdi-content-send"></i></h3>
+              <h3>
+                <SendIcon style={{ width: "48px", height: "48px" }}/>
+              </h3>
               <h4>Write us: <a href="mailto:hello@unicorndev.ru">hello@unicorndev.ru</a></h4>
             </div>
           </div>
