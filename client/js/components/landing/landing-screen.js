@@ -1,20 +1,25 @@
 import React from 'react'
 import LandingLogo from './landing-logo'
 import { Parallax } from 'react-parallax'
+import { RaisedButton } from 'material-ui'
 import KeyboardArrowDownIcon from 'material-ui/lib/svg-icons/hardware/keyboard-arrow-down'
 import Grid from '../grid/grid'
 
 
-export default () => {
+export default (props) => {
   return (
     <div>
       <div className="flying-block">
-        <a href="mailto:hello@unicorndev.ru">Write us</a>
+        <a href="mailto:hello@unicorndev.ru">
+          <RaisedButton>
+            Write us
+          </RaisedButton>
+        </a>
       </div>
       <Parallax
         strength={ 300 }
         bgImage="https://images.unsplash.com/photo-1443926818681-717d074a57af?dpr=2&fit=crop&fm=jpg&h=675&ixlib=rb-0.3.5&q=50&w=1300">
-        <div style={{ minHeight: window.innerHeight }}>
+        <div style={{ minHeight: window.innerHeight + (props.bottomSpace || 0) }}>
           <Grid layout="column" layoutAlign="center center" style={{ color: "white", textAlign: "center"}}>
             <Grid layout="column" style={{ height: window.innerHeight / 2 }} layoutAlign="center center">
               <LandingLogo/>

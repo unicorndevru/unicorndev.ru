@@ -24,6 +24,14 @@ module.exports = {
         }
       },
       {
+        test: /\.jpg$|\.png$/,
+        loaders: ['url']
+      },
+      {
+        test: /\.svg$/,
+        loaders: ['file', 'svgo-loader']
+      },
+      {
         test: /\.css$/,
         loaders: ["style", "css"]
       },

@@ -3,7 +3,7 @@ import Footer from './app-footer'
 
 export default (props) => {
   return (
-    <div>
+    <div style={{ backgroundColor: "#eee" }}>
       { props.children }
       <Footer/>
     </div>
