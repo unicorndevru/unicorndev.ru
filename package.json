@@ -7,8 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev-front": "webpack --config webpack.config.js --watch",
-    "start-dev-server": "source envs/development.sh && node --harmony --use_strict app.js",
-    "start-prod": "webpack --config webpack.config.js -p && source envs/production.sh && PORT=80 && pm2 start app.js --node-args='--harmony --use_strict'"
+    "start-dev-server": "source envs/development.sh && node --use_strict app.js",
+    "start-prod": "webpack --config webpack.config.js -p && source envs/production.sh && PORT=80 && pm2 start app.js --node-args='--use_strict'"
   },
   "repository": {
     "type": "git",
@@ -24,12 +24,15 @@
   },
   "homepage": "https://github.com/unicorndevru/unicorndev.ru#readme",
   "dependencies": {
+    "babel-plugin-transform-react-jsx": "^6.2.0",
     "environmental": "^1.2.1",
     "envs": "^0.1.6",
     "history": "^1.13.1",
+    "json-loader": "^0.5.3",
     "koa": "^1.1.2",
     "koa-better-body": "^1.0.17",
     "koa-errors": "^1.0.1",
+    "koa-hbs": "^0.7.0",
     "koa-router": "^5.2.3",
     "koa-send": "^3.1.0",
     "koa-static": "^1.5.2",

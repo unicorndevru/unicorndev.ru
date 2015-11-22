@@ -197,7 +197,10 @@ export default () => {
             </div>
           </div>
 
-          <ContactUs/>
+
+          <div className="section" id="contact">
+            <ContactUs/>
+          </div>
         </Paper>
       </Grid>
     </div>

@@ -3,3 +3,4 @@ envs/*.sh
 .DS_Store
 npm-debug.log
 public/bundle.js
+public/**.bundle.js
