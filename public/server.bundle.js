@@ -47,6 +47,10 @@ module.exports =
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -61,7 +65,11 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(_app2.default, null), document.getElementById('app'));
+	function render() {
+	  return ReactDOMServer.renderToString(_react2.default.createElement(_app2.default, null));
+	}
+
+	exports.default = render;
 
 /***/ },
 /* 1 */
@@ -71799,6 +71807,8 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var global = window || {};
+
 	exports.default = function (props) {
 	  return _react2.default.createElement(
 	    'div',
@@ -71823,13 +71833,13 @@ module.exports =
 	        bgImage: 'https://images.unsplash.com/photo-1440635592348-167b1b30296f?ixlib=rb-0.3.5&q=80&fm=jpg&s=fbe0a302315371033394b707170b75b5' },
 	      _react2.default.createElement(
 	        'div',
-	        { style: { minHeight: window.innerHeight + (props.bottomSpace || 0) } },
+	        { style: { minHeight: global.innerHeight + (props.bottomSpace || 0) } },
 	        _react2.default.createElement(
 	          _grid2.default,
 	          { layout: 'column', layoutAlign: 'center center', style: { color: "white", textAlign: "center" } },
 	          _react2.default.createElement(
 	            _grid2.default,
-	            { layout: 'column', style: { height: window.innerHeight / 2 }, layoutAlign: 'center center' },
+	            { layout: 'column', style: { height: global.innerHeight / 2 }, layoutAlign: 'center center' },
 	            _react2.default.createElement(_landingLogo2.default, null)
 	          ),
 	          _react2.default.createElement(

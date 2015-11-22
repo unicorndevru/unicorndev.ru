@@ -34,7 +34,7 @@ const loaders = [
 
 module.exports = [{
     entry: {
-      bundle: "./client/js/index.js",
+      bundle: "./app/initializers/client.js",
       vendor: [
         'react',
         'react-dom',
@@ -60,23 +60,25 @@ module.exports = [{
     plugins: [
       new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
     ]
-  },{
-    target: 'node',
-    entry: {
-      bundle: "./client/js/index.js",
-    },
-
-    output: {
-      path: "./public",
-      filename: 'server.[name].js',
-      publicPath: "/",
-      libraryTarget: "commonjs2"
-    },
-
-    module: {
-      loaders: loaders
-    },
-    plugins: [
-      new webpack.DefinePlugin({ "global.GENTLY": false })
-    ]
-  }]
+  }
+  // {
+  //   target: 'node',
+  //   entry: {
+  //     bundle: "./app/initializers/server.js",
+  //   },
+  //
+  //   output: {
+  //     path: "./public",
+  //     filename: 'server.[name].js',
+  //     publicPath: "/",
+  //     libraryTarget: "commonjs2"
+  //   },
+  //
+  //   module: {
+  //     loaders: loaders
+  //   },
+  //   plugins: [
+  //     new webpack.DefinePlugin({ "global.GENTLY": false })
+  //   ]
+  // }
+]

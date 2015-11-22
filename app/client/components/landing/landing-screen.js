@@ -6,6 +6,8 @@ import KeyboardArrowDownIcon from 'material-ui/lib/svg-icons/hardware/keyboard-a
 import Grid from '../grid/grid'
 
 
+const global = window || {}
+
 export default (props) => {
   return (
     <div>
@@ -19,9 +21,9 @@ export default (props) => {
       <Parallax
         strength={ 300 }
         bgImage="https://images.unsplash.com/photo-1440635592348-167b1b30296f?ixlib=rb-0.3.5&q=80&fm=jpg&s=fbe0a302315371033394b707170b75b5">
-        <div style={{ minHeight: window.innerHeight + (props.bottomSpace || 0) }}>
+        <div style={{ minHeight: global.innerHeight + (props.bottomSpace || 0) }}>
           <Grid layout="column" layoutAlign="center center" style={{ color: "white", textAlign: "center"}}>
-            <Grid layout="column" style={{ height: window.innerHeight / 2 }} layoutAlign="center center">
+            <Grid layout="column" style={{ height: global.innerHeight / 2 }} layoutAlign="center center">
               <LandingLogo/>
             </Grid>
             <Grid flex layoutAlign="center">
