@@ -1,6 +1,5 @@
 import React from 'react'
 import R from 'ramda'
-import './styles.scss'
 
 function camelToDash(string){
   return string.replace(/([A-Z])/g, function(substr, match){

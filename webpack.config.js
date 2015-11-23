@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require("webpack")
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 const loaders = [
   {
@@ -20,11 +21,18 @@ const loaders = [
   },
   {
     test: /\.css$/,
-    loaders: ["style", "css"]
+    loader: ExtractTextPlugin.extract(
+      "style-loader",
+      "css-loader"
+    )
   },
   {
     test: /\.scss$/,
-    loaders: ["style", "css", "sass?includePaths[]=" + path.resolve(__dirname, "./node_modules")]
+    loader: ExtractTextPlugin.extract(
+      "style-loader",
+      "css-loader",
+      "sass-loader?includePaths[]=" + path.resolve(__dirname, "./node_modules")
+    )
   },
   {
     test: /\.json$/,
@@ -58,27 +66,29 @@ module.exports = [{
       loaders: loaders
     },
     plugins: [
-      new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
+      new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js"),
+      new ExtractTextPlugin("[name].css")
+    ]
+  },
+  {
+    target: 'node',
+    entry: {
+      bundle: "./app/initializers/server.js",
+    },
+
+    output: {
+      path: "./public",
+      filename: 'server.[name].js',
+      publicPath: "/",
+      libraryTarget: "commonjs2"
+    },
+
+    module: {
+      loaders: loaders
+    },
+    plugins: [
+      new webpack.DefinePlugin({ "global.GENTLY": false }),
+      new ExtractTextPlugin("[name].css")
     ]
   }
-  // {
-  //   target: 'node',
-  //   entry: {
-  //     bundle: "./app/initializers/server.js",
-  //   },
-  //
-  //   output: {
-  //     path: "./public",
-  //     filename: 'server.[name].js',
-  //     publicPath: "/",
-  //     libraryTarget: "commonjs2"
-  //   },
-  //
-  //   module: {
-  //     loaders: loaders
-  //   },
-  //   plugins: [
-  //     new webpack.DefinePlugin({ "global.GENTLY": false })
-  //   ]
-  // }
 ]

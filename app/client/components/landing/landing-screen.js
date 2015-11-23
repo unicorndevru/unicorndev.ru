@@ -1,14 +1,29 @@
 import React from 'react'
+import R from 'ramda'
 import LandingLogo from './landing-logo'
 import { Parallax } from 'react-parallax'
 import { RaisedButton } from 'material-ui'
 import KeyboardArrowDownIcon from 'material-ui/lib/svg-icons/hardware/keyboard-arrow-down'
 import Grid from '../grid/grid'
 
+var global = null
 
-const global = window || {}
+try {
+  global = window
+} catch (e) {
+  global = {}
+}
 
 export default (props) => {
+  var ParralaxComponent = Parallax
+  if(R.isEmpty(global)){
+    ParralaxComponent = (props) => {
+      return (props.children)
+    }
+  }
+
+  let windowHeight = global.innerHeight || 1000
+
   return (
     <div>
       <div className="flying-block">
@@ -18,12 +33,12 @@ export default (props) => {
           </RaisedButton>
         </a>
       </div>
-      <Parallax
+      <ParralaxComponent
         strength={ 300 }
         bgImage="https://images.unsplash.com/photo-1440635592348-167b1b30296f?ixlib=rb-0.3.5&q=80&fm=jpg&s=fbe0a302315371033394b707170b75b5">
-        <div style={{ minHeight: global.innerHeight + (props.bottomSpace || 0) }}>
+        <div style={{ minHeight: windowHeight + (props.bottomSpace || 0) }}>
           <Grid layout="column" layoutAlign="center center" style={{ color: "white", textAlign: "center"}}>
-            <Grid layout="column" style={{ height: global.innerHeight / 2 }} layoutAlign="center center">
+            <Grid layout="column" style={{ height: windowHeight / 2 }} layoutAlign="center center">
               <LandingLogo/>
             </Grid>
             <Grid flex layoutAlign="center">
@@ -37,7 +52,7 @@ export default (props) => {
             </div>
           </Grid>
         </div>
-      </Parallax>
+      </ParralaxComponent>
     </div>
   )
 }
