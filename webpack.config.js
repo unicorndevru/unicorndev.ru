@@ -73,7 +73,7 @@ module.exports = [{
   {
     target: 'node',
     entry: {
-      bundle: "./app/initializers/server.js",
+      bundle: "./app/initializers/server/init.js",
     },
 
     output: {
