@@ -1,5 +1,14 @@
-const App = require('../../../public/server.bundle.js')
+const config = require('environmental').config()
 
+
+function app(){
+  var App = require('../../../public/server.bundle.js')
+  if(config.env === 'development'){
+    delete require.cache[require.resolve('../../../public/server.bundle.js')]
+  }
+
+  return App
+}
 
 module.exports = function (config){
   return function*(next) {
@@ -8,7 +17,7 @@ module.exports = function (config){
     if (this.method != 'HEAD' && this.method != 'GET') return
     if (this.body != null || this.status != 404) return
 
-    var result = yield App.matchRoute(this.request.url)
+    var result = yield app().matchRoute(this.request.url)
 
     GLOBAL.navigator = {
       userAgent: this.state.userAgent.source
@@ -28,5 +37,6 @@ module.exports = function (config){
       this.status = 404
       this.body = 'Not found'
     }
+    GLOBAL.navigator = null
   }
 }
