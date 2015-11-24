@@ -49,9 +49,8 @@
     "react-router": "^1.0.0",
     "reflux": "^0.3.0",
     "superagent": "^1.4.0",
-    "validator": "^4.2.1"
-  },
-  "devDependencies": {
+    "validator": "^4.2.1",
+    "webpack": "^1.12.6",
     "angular": "^1.4.7",
     "angular-animate": "^1.4.7",
     "angular-aria": "^1.4.7",
@@ -76,7 +75,6 @@
     "style-loader": "^0.13.0",
     "svgo": "^0.6.0",
     "svgo-loader": "^1.1.0",
-    "url-loader": "^0.5.6",
-    "webpack": "^1.12.6"
+    "url-loader": "^0.5.6"
   }
 }
