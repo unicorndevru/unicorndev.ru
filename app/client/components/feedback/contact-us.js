@@ -1,6 +1,5 @@
 import React from 'react'
 import FeedbackForm from './feedback-form'
-import View from 'react-flexbox-ui'
 import Grid from '../grid/grid'
 import SendIcon from 'material-ui/lib/svg-icons/content/send'
 
