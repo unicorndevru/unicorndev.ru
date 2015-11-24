@@ -11,7 +11,7 @@ export default () => {
     <div>
       <LandingScreen bottomSpace={ 200 }/>
       <Grid layout="column" layoutAlign="center center">
-        <Paper style={{ top: "-200px", position: "relative" }}>
+        <Paper style={{ top: "-30vh", position: "relative" }}>
           <div className="section no-pad-bot">
             <div className="container">
               <Grid layout="row" layoutSm="column" layoutAlign="space-around start">

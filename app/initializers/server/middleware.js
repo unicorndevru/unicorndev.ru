@@ -10,6 +10,10 @@ module.exports = function (config){
 
     var result = yield App.matchRoute(this.request.url)
 
+    GLOBAL.navigator = {
+      userAgent: this.state.userAgent.source
+    }
+
     if(result.error){
       this.status = 500
     } else if(result.redirectLocation){

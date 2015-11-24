@@ -24378,7 +24378,7 @@ module.exports =
 	      { layout: 'column', layoutAlign: 'center center' },
 	      _react2.default.createElement(
 	        _materialUi.Paper,
-	        { style: { top: "-200px", position: "relative" } },
+	        { style: { top: "-30vh", position: "relative" } },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'section no-pad-bot' },
@@ -76212,6 +76212,8 @@ module.exports =
 
 	'use strict';
 
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
@@ -76242,84 +76244,117 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 	var global = null;
 
-	try {
-	  global = window;
-	} catch (e) {
-	  global = {};
-	}
+	var LandingScreen = (function (_React$Component) {
+	  _inherits(LandingScreen, _React$Component);
 
-	exports.default = function (props) {
-	  var ParralaxComponent = _reactParallax.Parallax;
-	  if (_ramda2.default.isEmpty(global)) {
-	    ParralaxComponent = function (props) {
-	      return props.children;
-	    };
+	  function LandingScreen() {
+	    _classCallCheck(this, LandingScreen);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(LandingScreen).apply(this, arguments));
 	  }
 
-	  var windowHeight = global.innerHeight || 1000;
-
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'flying-block' },
-	      _react2.default.createElement(
-	        'a',
-	        { href: 'mailto:hello@unicorndev.ru' },
-	        _react2.default.createElement(
-	          _materialUi.RaisedButton,
+	  _createClass(LandingScreen, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.ParallaxComponent = function (props) {
+	        return _react2.default.createElement(
+	          'div',
 	          null,
-	          'Write us'
-	        )
-	      )
-	    ),
-	    _react2.default.createElement(
-	      ParralaxComponent,
-	      {
-	        strength: 300,
-	        bgImage: 'https://images.unsplash.com/photo-1440635592348-167b1b30296f?ixlib=rb-0.3.5&q=80&fm=jpg&s=fbe0a302315371033394b707170b75b5' },
-	      _react2.default.createElement(
+	          props.children
+	        );
+	      };
+	      this.setState({ windowHeight: 2000 });
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.ParallaxComponent = _reactParallax.Parallax;
+	      this.setState({ windowHeight: window.innerHeight });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var ParallaxComponent = this.ParallaxComponent;
+	      return _react2.default.createElement(
 	        'div',
-	        { style: { minHeight: windowHeight + (props.bottomSpace || 0) } },
+	        { style: { backgroundColor: "#21284F" } },
 	        _react2.default.createElement(
-	          _grid2.default,
-	          { layout: 'column', layoutAlign: 'center center', style: { color: "white", textAlign: "center" } },
+	          'div',
+	          { className: 'flying-block' },
 	          _react2.default.createElement(
-	            _grid2.default,
-	            { layout: 'column', style: { height: windowHeight / 2 }, layoutAlign: 'center center' },
-	            _react2.default.createElement(_landingLogo2.default, null)
-	          ),
-	          _react2.default.createElement(
-	            _grid2.default,
-	            { flex: true, layoutAlign: 'center' },
+	            'a',
+	            { href: 'mailto:hello@unicorndev.ru' },
 	            _react2.default.createElement(
-	              'h2',
-	              { className: 'title', style: { fontWeight: "700" } },
-	              'unicorndev'
+	              _materialUi.RaisedButton,
+	              null,
+	              'Write us'
 	            )
-	          ),
-	          _react2.default.createElement(
-	            _grid2.default,
-	            { flex: true, layoutAlign: 'center', style: { width: "70%" } },
-	            _react2.default.createElement(
-	              'h4',
-	              { className: 'header', style: { fontWeight: "200" } },
-	              'Dedicated team of super professionals to keep your startup at the cutting edge'
-	            )
-	          ),
+	          )
+	        ),
+	        _react2.default.createElement(
+	          ParallaxComponent,
+	          {
+	            strength: 300,
+	            bgImage: 'https://images.unsplash.com/photo-1440635592348-167b1b30296f?ixlib=rb-0.3.5&q=80&fm=jpg&s=fbe0a302315371033394b707170b75b5' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'scroll-down-container' },
-	            _react2.default.createElement(_keyboardArrowDown2.default, { style: { width: "48px", height: "48px" }, color: "white" })
+	            { style: {
+	                minHeight: "130vh",
+	                transition: 'min-height 1s ease'
+	              } },
+	            _react2.default.createElement(
+	              _grid2.default,
+	              { layout: 'column', layoutAlign: 'center center', style: { color: "white", textAlign: "center" } },
+	              _react2.default.createElement(
+	                _grid2.default,
+	                { layout: 'column', style: {
+	                    height: "50vh",
+	                    transition: 'height 1s ease'
+	                  }, layoutAlign: 'center center' },
+	                _react2.default.createElement(_landingLogo2.default, null)
+	              ),
+	              _react2.default.createElement(
+	                _grid2.default,
+	                { flex: true, layoutAlign: 'center' },
+	                _react2.default.createElement(
+	                  'h2',
+	                  { className: 'title', style: { fontWeight: "700" } },
+	                  'unicorndev'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _grid2.default,
+	                { flex: true, layoutAlign: 'center', style: { width: "70%" } },
+	                _react2.default.createElement(
+	                  'h4',
+	                  { className: 'header', style: { fontWeight: "200" } },
+	                  'Dedicated team of super professionals to keep your startup at the cutting edge'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'scroll-down-container' },
+	                _react2.default.createElement(_keyboardArrowDown2.default, { style: { width: "48px", height: "48px" }, color: "white" })
+	              )
+	            )
 	          )
 	        )
-	      )
-	    )
-	  );
-	};
+	      );
+	    }
+	  }]);
+
+	  return LandingScreen;
+	})(_react2.default.Component);
+
+	exports.default = LandingScreen;
 
 /***/ },
 /* 454 */
