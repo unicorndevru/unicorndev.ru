@@ -41,12 +41,13 @@ export default class LandingScreen extends React.Component {
           strength={ 300 }
           bgImage="https://images.unsplash.com/photo-1440635592348-167b1b30296f?ixlib=rb-0.3.5&q=80&fm=jpg&s=fbe0a302315371033394b707170b75b5">
           <div style={{
-              minHeight: "130vh",
+              minHeight: "100vh",
+              paddingBottom: "30vh",
               transition: 'min-height 1s ease'
             }}>
             <Grid layout="column" layoutAlign="center center" style={{ color: "white", textAlign: "center"}}>
               <Grid layout="column" style={{
-                  height: "50vh",
+                  minHeight: "50vh",
                   transition: 'height 1s ease'
                 }} layoutAlign="center center">
                 <LandingLogo/>

@@ -97,32 +97,38 @@ export default () => {
                   <p>Our team is an added value for your project. And costs is an investment.</p>
                 </Grid>
               </Grid>
-              <Grid layout="row" layoutSm="column" layoutWrap layoutAlign="space-around start" className="center">
-                <Grid flex={ 33 } flexSm={ 50 } layoutPadding >
+              <Grid
+                layout="row"
+                layoutSm="column"
+                layoutWrap
+                layoutAlign="space-around center"
+                layoutAlignSm="center center"
+                className="center">
+                <Grid flex={ 33 } flexMd={ 50 } flexSm={ 100 } layoutPadding >
                   <Avatar src="images/team/mitya.jpg" size={ 240 }/>
                   <p>Mitya, lead, backend</p>
                 </Grid>
-                <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
+                <Grid flex={ 33 } flexMd={ 50 } flexSm={ 100 } layoutPadding>
                   <Avatar src="images/team/alexey.jpg" size={ 240 }/>
                   <p>Alexey, backend</p>
                 </Grid>
-                <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
+                <Grid flex={ 33 } flexMd={ 50 } flexSm={ 100 } layoutPadding>
                   <Avatar src="images/team/dima.jpg" size={ 240 }/>
                   <p>Dmitry, frontend</p>
                 </Grid>
-                <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
+                <Grid flex={ 33 } flexMd={ 50 } flexSm={ 100 } layoutPadding>
                   <Avatar src="images/team/matveev.jpg" size={ 240 }/>
                   <p>Andrey, frontend</p>
                 </Grid>
-                <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
+                <Grid flex={ 33 } flexMd={ 50 } flexSm={ 100 } layoutPadding>
                   <Avatar src="images/team/fl.jpg" size={ 240 }/>
                   <p>Denis, frontend</p>
                 </Grid>
-                <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
+                <Grid flex={ 33 } flexMd={ 50 } flexSm={ 100 } layoutPadding>
                   <Avatar src="images/team/sokolov.jpg" size={ 240 }/>
                   <p>Evgeny Sokolov, UX</p>
                 </Grid>
-                <Grid flex={ 33 } flexSm={ 50 } layoutPadding>
+                <Grid flex={ 33 } flexMd={ 50 } flexSm={ 100 } layoutPadding>
                   <Avatar src="images/team/krasilova.jpg" size={ 240 }/>
                   <p>Natalia, product manager / marketer</p>
                 </Grid>
@@ -160,7 +166,12 @@ export default () => {
                   <h5>Some opensource we made to boost our code</h5>
                 </Grid>
               </Grid>
-              <Grid layout="row" layoutSm="column" layoutWrap layoutAlign="space-around center">
+              <Grid
+                layout="row"
+                layoutSm="column"
+                layoutWrap
+                layoutAlign="space-around center"
+                layoutAlignSm="center center">
                 <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
                   <h5><a href="https://github.com/unicorndevru/unicorn-ng-datepicker">unicorn-ng-datepicker</a></h5>
                   <p>unicorn-ng-datepicker</p>

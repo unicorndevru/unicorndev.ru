@@ -5,6 +5,5 @@ npm-debug.log
 public/bundle.js
 public/bundle.css
 public/vendor.css
-public/**.bundle.js
-public/**.vendor.css
-public/**.bundle.css
+public/server.bundle.js
+public/vendor.bundle.js

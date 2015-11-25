@@ -4,6 +4,7 @@ const config = require('environmental').config()
 function app(){
   var App = require('../../../public/server.bundle.js')
   if(config.env === 'development'){
+    console.log('cache reset')
     delete require.cache[require.resolve('../../../public/server.bundle.js')]
   }
 
@@ -20,7 +21,7 @@ module.exports = function (config){
     var result = yield app().matchRoute(this.request.url)
 
     GLOBAL.navigator = {
-      userAgent: this.state.userAgent.source
+      userAgent: this.request.header['user-agent'] || 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36'
     }
 
     if(result.error){
@@ -37,6 +38,5 @@ module.exports = function (config){
       this.status = 404
       this.body = 'Not found'
     }
-    GLOBAL.navigator = null
   }
 }
