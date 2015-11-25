@@ -29,7 +29,9 @@ export default class LandingScreen extends React.Component {
   render(){
     var ParallaxComponent = this.ParallaxComponent
     return (
-      <div style={{ backgroundColor: "#21284F" }}>
+      <div style={{
+          backgroundColor: "#21284F"
+        }}>
         <div className="flying-block">
           <a href="mailto:hello@unicorndev.ru">
             <RaisedButton>
@@ -41,7 +43,7 @@ export default class LandingScreen extends React.Component {
           strength={ 300 }
           bgImage="https://images.unsplash.com/photo-1440635592348-167b1b30296f?ixlib=rb-0.3.5&q=80&fm=jpg&s=fbe0a302315371033394b707170b75b5">
           <div style={{
-              minHeight: "100vh",
+              minHeight: "130vh",
               paddingBottom: "30vh",
               transition: 'min-height 1s ease'
             }}>
