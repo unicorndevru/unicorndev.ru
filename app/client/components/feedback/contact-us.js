@@ -17,10 +17,7 @@ export default (props) => {
           </div>
         </div>
       </Grid>
-      <Grid flexSm={ 100 } flexGtSm={ 50 } flexOffsetGtSm={ 25 }>
-        <p>
-          Drop us a line:
-        </p>
+      <Grid flexSm={ 100 } flexGtSm={ 50 } flexOffsetGtSm={ 25 } layoutPadding>
         <FeedbackForm/>
       </Grid>
     </Grid>

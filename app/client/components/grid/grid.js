@@ -7,13 +7,13 @@ function camelToDash(string){
   })
 }
 
-function combineValueAndAttr(attrValue, attrName){
-  return `${ camelToDash(attrName) }-${ attrValue }`
-}
+function combineValueAndAttr(attrName, attrValue){
+  var value = attrValue
+  if(R.is(String, value)){
+    value = R.join('-', R.split(/\s+/, attrValue))
+  }
 
-function layoutAlign(value, attrName){
-  let alignOptions = R.split(/\s+/, value)
-  return `${ camelToDash(attrName) }-` + R.join('-', alignOptions)
+  return `${ camelToDash(attrName) }-${ value }`
 }
 
 const gridPropsRegexp = /^flex|^layout|^hide/
@@ -23,20 +23,13 @@ const propProcessors = {
     if(!value || value === 'flex' || value === true){
       return 'flex'
     } else {
-      return combineValueAndAttr(value, 'flex')
+      return combineValueAndAttr('flex', value)
     }
-  },
-  layoutAlign(value){
-    return layoutAlign(value, 'layoutAlign')
-  },
-
-  layoutAlignMd(value) {
-    return layoutAlign(value, 'layoutAlignMd')
   },
 
   default(value, attrName){
     if(value && value !== attrName && value !== true){
-      return combineValueAndAttr(value, attrName)
+      return combineValueAndAttr(attrName, value)
     } else {
       return camelToDash(attrName)
     }
@@ -54,7 +47,7 @@ export default (props) => {
     } else {
       passingProps[attrName] = props[attrName]
     }
-  }, R.keys(props)).join(' ').concat(props.className)
+  }, R.keys(props)).join(' ').concat(props.className || '')
 
   if(props.component){
     return (

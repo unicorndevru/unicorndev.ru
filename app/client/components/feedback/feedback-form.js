@@ -59,26 +59,31 @@ export default class FeedbackForm extends React.Component {
 
 
     return (
-      <Grid layout="column" layoutAlign="center">
-        <form onSubmit={ this.submit }>
-          <TextField style={ textFieldStyle } name="name" hintText={ "Your name" } onChange={ this.handleChange }/>
-          <TextField style={ textFieldStyle } type={ "email" } name="email" hintText={ "E-mail for reply" }  onChange={ this.handleChange }/>
-          <TextField
-            style={ textFieldStyle }
-            name="message"
-            multiLine={ true }
-            hintText={ "Message" }
-            onChange={ this.handleChange }/>
-          <div>
-            { status }
-          </div>
-          <RaisedButton
-            style={{ width: "60px", marginTop: "2em"}}
-            primary={ true }
-            label="Submit"
-            type={'submit'} />
-        </form>
-      </Grid>
+      <div>
+        <p>
+          Drop us a line:
+        </p>
+        <Grid layout="column" layoutAlign="center">
+          <form onSubmit={ this.submit }>
+            <TextField style={ textFieldStyle } name="name" hintText={ "Your name" } onChange={ this.handleChange }/>
+            <TextField style={ textFieldStyle } type={ "email" } name="email" hintText={ "E-mail for reply" }  onChange={ this.handleChange }/>
+            <TextField
+              style={ textFieldStyle }
+              name="message"
+              multiLine={ true }
+              hintText={ "Message" }
+              onChange={ this.handleChange }/>
+            <div>
+              { status }
+            </div>
+            <RaisedButton
+              style={{ width: "60px", marginTop: "2em"}}
+              primary={ true }
+              label="Submit"
+              type={'submit'} />
+          </form>
+        </Grid>
+      </div>
 
     )
   }

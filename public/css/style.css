@@ -87,19 +87,9 @@ footer.page-footer .footer-copyright {
   margin-bottom: 0;
 }
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-  .parallax-container {
-    padding-bottom: 4rem;
-    min-height: 0;
-  }
-}
-
 @media only screen and (min-width: 992px) {
   html {
-   font-size: 18px;
+    font-size: 18px;
   }
 
   footer {
