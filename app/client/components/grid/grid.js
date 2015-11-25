@@ -47,7 +47,7 @@ export default (props) => {
     } else {
       passingProps[attrName] = props[attrName]
     }
-  }, R.keys(props)).join(' ').concat(props.className)
+  }, R.keys(props)).join(' ').concat(props.className || '')
 
   if(props.component){
     return (

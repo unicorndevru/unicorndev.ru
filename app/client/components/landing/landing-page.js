@@ -138,12 +138,19 @@ export default () => {
 
           <div className="section">
             <div className="container">
-              <Grid layout="row" layoutSm="column" layoutAlign="space-around center">
+              <Grid
+                layout="row"
+                layoutSm="column"
+                layoutAlign="space-around center">
                 <Grid flex={ 100 } layoutPadding className="center">
                   <h5>Some projects</h5>
                 </Grid>
               </Grid>
-              <Grid layout="row" layoutSm="column" layoutAlign="space-around center">
+              <Grid
+                layout="row"
+                layoutSm="column"
+                layoutAlign="space-around center"
+                layoutAlignSm="center start">
                 <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
                   <h5><a href="http://passenger.me">Passenger.me</a></h5>
                   <p>
@@ -171,7 +178,7 @@ export default () => {
                 layoutSm="column"
                 layoutWrap
                 layoutAlign="space-around center"
-                layoutAlignSm="center center">
+                layoutAlignSm="center start">
                 <Grid flex={ 50 } flexSm={ 100 } layoutPadding className="github-project">
                   <h5><a href="https://github.com/unicorndevru/unicorn-ng-datepicker">unicorn-ng-datepicker</a></h5>
                   <p>unicorn-ng-datepicker</p>

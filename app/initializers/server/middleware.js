@@ -30,9 +30,15 @@ module.exports = function (config){
       this.status = 302
       this.response.redirect(result.redirect.to)
     } else if(result.render){
+      var html = ''
+      try {
+        html = result.render()
+      } catch(e) {
+        console.error(e)
+      }
       this.status = 200
       yield this.render(config.view, {
-        app: result.render()
+        app: html
       })
     } else {
       this.status = 404
